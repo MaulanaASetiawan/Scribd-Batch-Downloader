@@ -24,4 +24,20 @@ Pastikan di PC kamu udah terpasang **Python 3.8** (atau yang lebih baru) dan **G
 3. Install library pendukung dengan menjalankan perintah berikut:
    ```bash
    pip install requests pillow selenium
-4. Jalankan file `main.py` dan Download semua file yang kalian butuhkan dalam satu kali klik.
+
+## 🚀 Cara Menjalankan
+1. Di terminal/CMD yang sama, jalankan aplikasinya pakai perintah: `python main.py`
+2. Cari ID dokumen dari URL Scribd yang mau didownload. (Contoh: dari link https://www.scribd.com/document/123456789/Judul-Buku, ID-nya adalah 123456789).
+3. Paste ID tersebut ke kotak input di sebelah kiri UI. Kalau mau download banyak sekaligus, enter saja ke bawah untuk ID selanjutnya.
+4. Klik tombol Start.
+5. ⚠️ Catatan Penting: Saat baru mulai, browser Chrome akan terbuka sebentar di latar belakang. Kalau Scribd memunculkan halaman Captcha, tolong selesaikan secara manual dulu di browser tersebut (ada waktu tunggu 15 detik). Setelah lolos, script akan otomatis lanjut kerja.
+6. Tunggu progress bar selesai. PDF akan otomatis tersimpan di folder `Scribd_Downloads.`
+
+## 📁 Struktur Folder
+Biar manajemen filenya rapi, script ini bakal otomatis bikin folder berikut di lokasi yang sama dengan file main.py:
+- `Scribd_Downloads/` → Folder utama tempat file PDF ngumpul.
+- `Scribd_Downloads/.thumbnails/` → Folder tersembunyi (hidden) untuk nyimpen cache cover buku.
+- `temp_images/` → Folder transit. Cuma muncul pas lagi proses download, habis itu otomatis hilang.
+
+## ⚖️ Disclaimer
+Script ini ditulis murni untuk tujuan pembelajaran (edukasi) dan mempermudah personal archiving (arsip pribadi). Segala bentuk penyalahgunaan, distribusi ulang, atau pelanggaran hak cipta dari dokumen yang diunduh sepenuhnya berada di luar tanggung jawab developer. Use it responsibly! ✌️
